@@ -136,3 +136,13 @@ app.post('/saveitem', function (request, response) {
     response.render('listpage',{ items: allItems });
 });
 
+app.get('/like', function (request, response) {
+ var book = request.query.book;
+    var allItems = likeAndSort('book',book);
+   response.render('listpage',{ items: allItems });
+
+    app.get('/delete', function (request, response) {
+ var book = request.query.book;
+    var allItems = likeAndSort('book',book);
+   response.render('listpage',{ items: allItems });
+});
