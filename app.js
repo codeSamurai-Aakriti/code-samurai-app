@@ -141,8 +141,9 @@ app.get('/like', function (request, response) {
     var allItems = likeAndSort('book',book);
    response.render('listpage',{ items: allItems });
 
-    app.get('/delete', function (request, response) {
+});
+app.get('/delete', function (request, response) {
  var book = request.query.book;
-    var allItems = likeAndSort('book',book);
+    var allItems = deleteAndSort('book',book);
    response.render('listpage',{ items: allItems });
 });
